@@ -1,0 +1,37 @@
+ 
+****************************************
+Report : cell
+Design : AES_128_shared
+Version: P-2019.03
+Date   : Mon Jun 22 13:31:34 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+AES_Sbox                  Sbox_shared                     46601.336895
+                                                                    h, n
+Control                   Controller                      139.915998
+                                                                    h, n
+Key_ar                    Key_array_Dshare                3331.915928
+                                                                    h, n
+State_ar                  State_Array_Dshare              4433.421899
+                                                                    h, n
+mux_Rkey                  Mux2_Dshare_5                   62.776002 h
+mux_Rkey_xor              Mux2_Dshare_0                   62.776002 h
+mux_S                     Mux2_Dshare_3                   62.776002 h
+mux_cipher                Mux2_Dshare_1                   62.776002 h
+mux_key                   Mux2_Dshare_4                   61.712002 h
+mux_state                 Mux2_Dshare_2                   61.712002 h
+xor_Rcon                  Xor_Dshare_2                    51.071999 h
+xor_add                   Xor_Dshare_1                    51.071999 h
+xor_key30                 Xor_Dshare_0                    51.071999 h
+--------------------------------------------------------------------------------
+Total 13 cells                                            55034.334724
+1

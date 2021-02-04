@@ -1,0 +1,1007 @@
+ 
+****************************************
+Report : reference
+Design : AES_128_shared
+Version: P-2019.03
+Date   : Mon Jun 22 13:31:37 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Controller                      139.915998       1    139.915998  h, n
+Key_array_Dshare               3331.915928       1   3331.915928  h, n
+Mux2_Dshare_0                    62.776002       1     62.776002  h
+Mux2_Dshare_1                    62.776002       1     62.776002  h
+Mux2_Dshare_2                    61.712002       1     61.712002  h
+Mux2_Dshare_3                    62.776002       1     62.776002  h
+Mux2_Dshare_4                    61.712002       1     61.712002  h
+Mux2_Dshare_5                    62.776002       1     62.776002  h
+Sbox_shared                   46601.336895       1  46601.336895  h, n
+State_Array_Dshare             4433.421899       1   4433.421899  h, n
+Xor_Dshare_0                     51.071999       1     51.071999  h
+Xor_Dshare_1                     51.071999       1     51.071999  h
+Xor_Dshare_2                     51.071999       1     51.071999  h
+-----------------------------------------------------------------------------
+Total 13 references                                 55034.334724
+
+****************************************
+Design: Controller 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       9     9.576000
+AOI21_X1           NangateOpenCellLibrary     1.064000       1     1.064000
+AOI211_X1          NangateOpenCellLibrary     1.330000       1     1.330000
+BUF_X1             NangateOpenCellLibrary     0.798000       1     0.798000
+Control_counter                  43.092000       1     43.092000  h, n
+DFF_X1             NangateOpenCellLibrary     4.522000       1     4.522000 n
+INV_X1             NangateOpenCellLibrary     0.532000      12     6.384000
+NAND2_X1           NangateOpenCellLibrary     0.798000       3     2.394000
+NAND4_X1           NangateOpenCellLibrary     1.330000       2     2.660000
+NOR2_X1            NangateOpenCellLibrary     0.798000       8     6.384000
+NOR3_X2            NangateOpenCellLibrary     1.862000       1     1.862000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+OR3_X1             NangateOpenCellLibrary     1.330000       2     2.660000
+Rconst                           56.125998       1     56.125998  h, n
+-----------------------------------------------------------------------------
+Total 14 references                                   139.915998
+
+****************************************
+Design: Control_counter 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       5     6.650000
+DFF_X1             NangateOpenCellLibrary     4.522000       5    22.609999 n
+HA_X1              NangateOpenCellLibrary     2.660000       3     7.980000 r
+INV_X1             NangateOpenCellLibrary     0.532000       5     2.660000
+NOR2_X1            NangateOpenCellLibrary     0.798000       2     1.596000
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 6 references                                     43.092000
+
+****************************************
+Design: Rconst 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DFF_X1             NangateOpenCellLibrary     4.522000       8    36.175999 n
+INV_X1             NangateOpenCellLibrary     0.532000       2     1.064000
+NAND2_X1           NangateOpenCellLibrary     0.798000       1     0.798000
+NAND3_X1           NangateOpenCellLibrary     1.064000       1     1.064000
+NOR2_X1            NangateOpenCellLibrary     0.798000       1     0.798000
+OAI21_X1           NangateOpenCellLibrary     1.064000       1     1.064000
+OAI22_X1           NangateOpenCellLibrary     1.330000       3     3.990000
+OAI221_X1          NangateOpenCellLibrary     1.596000       4     6.384000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       3     4.788000
+-----------------------------------------------------------------------------
+Total 9 references                                     56.125998
+
+****************************************
+Design: Key_array_Dshare 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X1             NangateOpenCellLibrary     0.798000       2     1.596000
+BUF_X2             NangateOpenCellLibrary     1.064000       1     1.064000
+Key_array_1share_0              832.313982       1    832.313982  h, n
+Key_array_1share_1              832.313982       1    832.313982  h, n
+Key_array_1share_2              832.313982       1    832.313982  h, n
+Key_array_1share_3              832.313982       1    832.313982  h, n
+-----------------------------------------------------------------------------
+Total 6 references                                   3331.915928
+
+****************************************
+Design: Key_array_1share_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X1             NangateOpenCellLibrary     0.798000      33    26.333999
+DFF_X1             NangateOpenCellLibrary     4.522000     128   578.815979 n
+INV_X1             NangateOpenCellLibrary     0.532000      16     8.512000
+NAND2_X1           NangateOpenCellLibrary     0.798000      17    13.566000
+NOR2_X1            NangateOpenCellLibrary     0.798000       1     0.798000
+OAI22_X1           NangateOpenCellLibrary     1.330000      96   127.680004
+OAI221_X1          NangateOpenCellLibrary     1.596000       8    12.768000
+OAI222_X1          NangateOpenCellLibrary     2.128000      24    51.072001
+XNOR2_X1           NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 9 references                                    832.313982
+
+****************************************
+Design: Key_array_1share_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X1             NangateOpenCellLibrary     0.798000      33    26.333999
+DFF_X1             NangateOpenCellLibrary     4.522000     128   578.815979 n
+INV_X1             NangateOpenCellLibrary     0.532000      16     8.512000
+NAND2_X1           NangateOpenCellLibrary     0.798000      17    13.566000
+NOR2_X1            NangateOpenCellLibrary     0.798000       1     0.798000
+OAI22_X1           NangateOpenCellLibrary     1.330000      96   127.680004
+OAI221_X1          NangateOpenCellLibrary     1.596000       8    12.768000
+OAI222_X1          NangateOpenCellLibrary     2.128000      24    51.072001
+XNOR2_X1           NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 9 references                                    832.313982
+
+****************************************
+Design: Key_array_1share_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X1             NangateOpenCellLibrary     0.798000      33    26.333999
+DFF_X1             NangateOpenCellLibrary     4.522000     128   578.815979 n
+INV_X1             NangateOpenCellLibrary     0.532000      16     8.512000
+NAND2_X1           NangateOpenCellLibrary     0.798000      17    13.566000
+NOR2_X1            NangateOpenCellLibrary     0.798000       1     0.798000
+OAI22_X1           NangateOpenCellLibrary     1.330000      96   127.680004
+OAI221_X1          NangateOpenCellLibrary     1.596000       8    12.768000
+OAI222_X1          NangateOpenCellLibrary     2.128000      24    51.072001
+XNOR2_X1           NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 9 references                                    832.313982
+
+****************************************
+Design: Key_array_1share_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X1             NangateOpenCellLibrary     0.798000      33    26.333999
+DFF_X1             NangateOpenCellLibrary     4.522000     128   578.815979 n
+INV_X1             NangateOpenCellLibrary     0.532000      16     8.512000
+NAND2_X1           NangateOpenCellLibrary     0.798000      17    13.566000
+NOR2_X1            NangateOpenCellLibrary     0.798000       1     0.798000
+OAI22_X1           NangateOpenCellLibrary     1.330000      96   127.680004
+OAI221_X1          NangateOpenCellLibrary     1.596000       8    12.768000
+OAI222_X1          NangateOpenCellLibrary     2.128000      24    51.072001
+XNOR2_X1           NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 9 references                                    832.313982
+
+****************************************
+Design: Mux2_Dshare_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Mux2_1share_0                    15.428000       1     15.428000  h
+Mux2_1share_21                   15.428000       1     15.428000  h
+Mux2_1share_22                   15.960000       1     15.960000  h
+Mux2_1share_23                   15.960000       1     15.960000  h
+-----------------------------------------------------------------------------
+Total 4 references                                     62.776002
+
+****************************************
+Design: Mux2_1share_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_21 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_22 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000      10     5.320000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.960000
+
+****************************************
+Design: Mux2_1share_23 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000      10     5.320000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.960000
+
+****************************************
+Design: Mux2_Dshare_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Mux2_1share_1                    15.428000       1     15.428000  h
+Mux2_1share_2                    15.428000       1     15.428000  h
+Mux2_1share_3                    15.960000       1     15.960000  h
+Mux2_1share_4                    15.960000       1     15.960000  h
+-----------------------------------------------------------------------------
+Total 4 references                                     62.776002
+
+****************************************
+Design: Mux2_1share_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000      10     5.320000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.960000
+
+****************************************
+Design: Mux2_1share_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000      10     5.320000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.960000
+
+****************************************
+Design: Mux2_Dshare_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Mux2_1share_5                    15.428000       1     15.428000  h
+Mux2_1share_6                    15.428000       1     15.428000  h
+Mux2_1share_7                    15.428000       1     15.428000  h
+Mux2_1share_8                    15.428000       1     15.428000  h
+-----------------------------------------------------------------------------
+Total 4 references                                     61.712002
+
+****************************************
+Design: Mux2_1share_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_Dshare_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Mux2_1share_9                    15.428000       1     15.428000  h
+Mux2_1share_10                   15.960000       1     15.960000  h
+Mux2_1share_11                   15.960000       1     15.960000  h
+Mux2_1share_12                   15.428000       1     15.428000  h
+-----------------------------------------------------------------------------
+Total 4 references                                     62.776002
+
+****************************************
+Design: Mux2_1share_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000      10     5.320000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.960000
+
+****************************************
+Design: Mux2_1share_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000      10     5.320000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.960000
+
+****************************************
+Design: Mux2_1share_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_Dshare_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Mux2_1share_13                   15.428000       1     15.428000  h
+Mux2_1share_14                   15.428000       1     15.428000  h
+Mux2_1share_15                   15.428000       1     15.428000  h
+Mux2_1share_16                   15.428000       1     15.428000  h
+-----------------------------------------------------------------------------
+Total 4 references                                     61.712002
+
+****************************************
+Design: Mux2_1share_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_14 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_Dshare_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Mux2_1share_17                   15.428000       1     15.428000  h
+Mux2_1share_18                   15.960000       1     15.960000  h
+Mux2_1share_19                   15.960000       1     15.960000  h
+Mux2_1share_20                   15.428000       1     15.428000  h
+-----------------------------------------------------------------------------
+Total 4 references                                     62.776002
+
+****************************************
+Design: Mux2_1share_17 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Mux2_1share_18 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000      10     5.320000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.960000
+
+****************************************
+Design: Mux2_1share_19 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000      10     5.320000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.960000
+
+****************************************
+Design: Mux2_1share_20 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000       8    10.640000
+INV_X1             NangateOpenCellLibrary     0.532000       9     4.788000
+-----------------------------------------------------------------------------
+Total 2 references                                     15.428000
+
+****************************************
+Design: Sbox_shared 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DFF_X1             NangateOpenCellLibrary     4.522000      32   144.703995 n
+affine                          103.739997       1    103.739997  h
+x26_shares                    22603.083453       1  22603.083453  h
+x49_shares                    23749.809450       1  23749.809450  h
+-----------------------------------------------------------------------------
+Total 4 references                                  46601.336895
+
+****************************************
+Design: affine 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      15    23.939999
+XOR2_X1            NangateOpenCellLibrary     1.596000      50    79.799998
+-----------------------------------------------------------------------------
+Total 2 references                                    103.739997
+
+****************************************
+Design: x26_shares 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      29    30.856000
+AND3_X1            NangateOpenCellLibrary     1.330000       1     1.330000
+AOI21_X1           NangateOpenCellLibrary     1.064000      57    60.648001
+AOI22_X1           NangateOpenCellLibrary     1.330000     126   167.580005
+BUF_X1             NangateOpenCellLibrary     0.798000     541   431.717988
+CLKBUF_X1          NangateOpenCellLibrary     0.798000      26    20.747999
+INV_X1             NangateOpenCellLibrary     0.532000    1179   627.228006
+INV_X2             NangateOpenCellLibrary     0.798000       1     0.798000
+NAND2_X1           NangateOpenCellLibrary     0.798000    2525  2014.949945
+NAND3_X1           NangateOpenCellLibrary     1.064000      22    23.408000
+NOR2_X1            NangateOpenCellLibrary     0.798000    2925  2334.149936
+NOR2_X2            NangateOpenCellLibrary     1.330000      93   123.690004
+OAI21_X1           NangateOpenCellLibrary     1.064000      31    32.984000
+OAI22_X1           NangateOpenCellLibrary     1.330000     328   436.240014
+OAI221_X1          NangateOpenCellLibrary     1.596000       4     6.384000
+OR2_X1             NangateOpenCellLibrary     1.064000      50    53.200001
+OR3_X1             NangateOpenCellLibrary     1.330000       2     2.660000
+XNOR2_X1           NangateOpenCellLibrary     1.596000    3334  5321.063854
+XOR2_X1            NangateOpenCellLibrary     1.596000    6838 10913.447700
+-----------------------------------------------------------------------------
+Total 19 references                                 22603.083453
+
+****************************************
+Design: x49_shares 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      24    25.536000
+AND3_X1            NangateOpenCellLibrary     1.330000       2     2.660000
+AOI21_X1           NangateOpenCellLibrary     1.064000      26    27.664000
+AOI22_X1           NangateOpenCellLibrary     1.330000     100   133.000004
+BUF_X1             NangateOpenCellLibrary     0.798000     650   518.699986
+CLKBUF_X1          NangateOpenCellLibrary     0.798000      31    24.737999
+INV_X1             NangateOpenCellLibrary     0.532000    1599   850.668008
+NAND2_X1           NangateOpenCellLibrary     0.798000    2843  2268.713938
+NAND3_X1           NangateOpenCellLibrary     1.064000      29    30.856000
+NOR2_X1            NangateOpenCellLibrary     0.798000    3062  2443.475933
+NOR2_X2            NangateOpenCellLibrary     1.330000       1     1.330000
+OAI21_X1           NangateOpenCellLibrary     1.064000      70    74.480001
+OAI22_X1           NangateOpenCellLibrary     1.330000     691   919.030030
+OR2_X1             NangateOpenCellLibrary     1.064000      39    41.496000
+OR3_X1             NangateOpenCellLibrary     1.330000       1     1.330000
+XNOR2_X1           NangateOpenCellLibrary     1.596000    2231  3560.675902
+XOR2_X1            NangateOpenCellLibrary     1.596000    8036 12825.455647
+-----------------------------------------------------------------------------
+Total 17 references                                 23749.809450
+
+****************************************
+Design: State_Array_Dshare 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X1             NangateOpenCellLibrary     0.798000       1     0.798000
+State_Array_1share_0           1108.155975       1   1108.155975  h, n
+State_Array_1share_1           1108.155975       1   1108.155975  h, n
+State_Array_1share_2           1108.155975       1   1108.155975  h, n
+State_Array_1share_3           1108.155975       1   1108.155975  h, n
+-----------------------------------------------------------------------------
+Total 5 references                                   4433.421899
+
+****************************************
+Design: State_Array_1share_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000      16    21.280001
+BUF_X1             NangateOpenCellLibrary     0.798000      26    20.747999
+CLKBUF_X1          NangateOpenCellLibrary     0.798000       1     0.798000
+DFF_X1             NangateOpenCellLibrary     4.522000     128   578.815979 n
+INV_X1             NangateOpenCellLibrary     0.532000      17     9.044000
+MixColumns_0                    210.671994       1    210.671994  h
+NAND2_X1           NangateOpenCellLibrary     0.798000      19    15.162000
+NOR2_X1            NangateOpenCellLibrary     0.798000       2     1.596000
+OAI21_X1           NangateOpenCellLibrary     1.064000       8     8.512000
+OAI22_X1           NangateOpenCellLibrary     1.330000      24    31.920001
+OAI221_X1          NangateOpenCellLibrary     1.596000      24    38.303999
+OAI222_X1          NangateOpenCellLibrary     2.128000      80   170.240002
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+-----------------------------------------------------------------------------
+Total 13 references                                  1108.155975
+
+****************************************
+Design: MixColumns_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Mixcol_function_0                52.667999       1     52.667999  h
+Mixcol_function_13               52.667999       1     52.667999  h
+Mixcol_function_14               52.667999       1     52.667999  h
+Mixcol_function_15               52.667999       1     52.667999  h
+-----------------------------------------------------------------------------
+Total 4 references                                    210.671994
+
+****************************************
+Design: Mixcol_function_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      17    27.131999
+XOR2_X1            NangateOpenCellLibrary     1.596000      16    25.535999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      13    20.747999
+XOR2_X1            NangateOpenCellLibrary     1.596000      20    31.919999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_14 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      13    20.747999
+XOR2_X1            NangateOpenCellLibrary     1.596000      20    31.919999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      11    17.556000
+XOR2_X1            NangateOpenCellLibrary     1.596000      22    35.111999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: State_Array_1share_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000      16    21.280001
+BUF_X1             NangateOpenCellLibrary     0.798000      26    20.747999
+CLKBUF_X1          NangateOpenCellLibrary     0.798000       1     0.798000
+DFF_X1             NangateOpenCellLibrary     4.522000     128   578.815979 n
+INV_X1             NangateOpenCellLibrary     0.532000      17     9.044000
+MixColumns_1                    210.671994       1    210.671994  h
+NAND2_X1           NangateOpenCellLibrary     0.798000      19    15.162000
+NOR2_X1            NangateOpenCellLibrary     0.798000       2     1.596000
+OAI21_X1           NangateOpenCellLibrary     1.064000       8     8.512000
+OAI22_X1           NangateOpenCellLibrary     1.330000      24    31.920001
+OAI221_X1          NangateOpenCellLibrary     1.596000      24    38.303999
+OAI222_X1          NangateOpenCellLibrary     2.128000      80   170.240002
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+-----------------------------------------------------------------------------
+Total 13 references                                  1108.155975
+
+****************************************
+Design: MixColumns_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Mixcol_function_1                52.667999       1     52.667999  h
+Mixcol_function_2                52.667999       1     52.667999  h
+Mixcol_function_3                52.667999       1     52.667999  h
+Mixcol_function_4                52.667999       1     52.667999  h
+-----------------------------------------------------------------------------
+Total 4 references                                    210.671994
+
+****************************************
+Design: Mixcol_function_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      13    20.747999
+XOR2_X1            NangateOpenCellLibrary     1.596000      20    31.919999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      13    20.747999
+XOR2_X1            NangateOpenCellLibrary     1.596000      20    31.919999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      13    20.747999
+XOR2_X1            NangateOpenCellLibrary     1.596000      20    31.919999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      17    27.131999
+XOR2_X1            NangateOpenCellLibrary     1.596000      16    25.535999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: State_Array_1share_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000      16    21.280001
+BUF_X1             NangateOpenCellLibrary     0.798000      26    20.747999
+CLKBUF_X1          NangateOpenCellLibrary     0.798000       1     0.798000
+DFF_X1             NangateOpenCellLibrary     4.522000     128   578.815979 n
+INV_X1             NangateOpenCellLibrary     0.532000      17     9.044000
+MixColumns_2                    210.671994       1    210.671994  h
+NAND2_X1           NangateOpenCellLibrary     0.798000      19    15.162000
+NOR2_X1            NangateOpenCellLibrary     0.798000       2     1.596000
+OAI21_X1           NangateOpenCellLibrary     1.064000       8     8.512000
+OAI22_X1           NangateOpenCellLibrary     1.330000      24    31.920001
+OAI221_X1          NangateOpenCellLibrary     1.596000      24    38.303999
+OAI222_X1          NangateOpenCellLibrary     2.128000      80   170.240002
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+-----------------------------------------------------------------------------
+Total 13 references                                  1108.155975
+
+****************************************
+Design: MixColumns_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Mixcol_function_5                52.667999       1     52.667999  h
+Mixcol_function_6                52.667999       1     52.667999  h
+Mixcol_function_7                52.667999       1     52.667999  h
+Mixcol_function_8                52.667999       1     52.667999  h
+-----------------------------------------------------------------------------
+Total 4 references                                    210.671994
+
+****************************************
+Design: Mixcol_function_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      13    20.747999
+XOR2_X1            NangateOpenCellLibrary     1.596000      20    31.919999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      13    20.747999
+XOR2_X1            NangateOpenCellLibrary     1.596000      20    31.919999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      13    20.747999
+XOR2_X1            NangateOpenCellLibrary     1.596000      20    31.919999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      17    27.131999
+XOR2_X1            NangateOpenCellLibrary     1.596000      16    25.535999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: State_Array_1share_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NangateOpenCellLibrary     1.330000      16    21.280001
+BUF_X1             NangateOpenCellLibrary     0.798000      26    20.747999
+CLKBUF_X1          NangateOpenCellLibrary     0.798000       1     0.798000
+DFF_X1             NangateOpenCellLibrary     4.522000     128   578.815979 n
+INV_X1             NangateOpenCellLibrary     0.532000      17     9.044000
+MixColumns_3                    210.671994       1    210.671994  h
+NAND2_X1           NangateOpenCellLibrary     0.798000      19    15.162000
+NOR2_X1            NangateOpenCellLibrary     0.798000       2     1.596000
+OAI21_X1           NangateOpenCellLibrary     1.064000       8     8.512000
+OAI22_X1           NangateOpenCellLibrary     1.330000      24    31.920001
+OAI221_X1          NangateOpenCellLibrary     1.596000      24    38.303999
+OAI222_X1          NangateOpenCellLibrary     2.128000      80   170.240002
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+-----------------------------------------------------------------------------
+Total 13 references                                  1108.155975
+
+****************************************
+Design: MixColumns_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Mixcol_function_9                52.667999       1     52.667999  h
+Mixcol_function_10               52.667999       1     52.667999  h
+Mixcol_function_11               52.667999       1     52.667999  h
+Mixcol_function_12               52.667999       1     52.667999  h
+-----------------------------------------------------------------------------
+Total 4 references                                    210.671994
+
+****************************************
+Design: Mixcol_function_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      13    20.747999
+XOR2_X1            NangateOpenCellLibrary     1.596000      20    31.919999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      13    20.747999
+XOR2_X1            NangateOpenCellLibrary     1.596000      20    31.919999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      13    20.747999
+XOR2_X1            NangateOpenCellLibrary     1.596000      20    31.919999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Mixcol_function_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XNOR2_X1           NangateOpenCellLibrary     1.596000      17    27.131999
+XOR2_X1            NangateOpenCellLibrary     1.596000      16    25.535999
+-----------------------------------------------------------------------------
+Total 2 references                                     52.667999
+
+****************************************
+Design: Xor_Dshare_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Xor_1share_0                     12.768000       1     12.768000  h
+Xor_1share_9                     12.768000       1     12.768000  h
+Xor_1share_10                    12.768000       1     12.768000  h
+Xor_1share_11                    12.768000       1     12.768000  h
+-----------------------------------------------------------------------------
+Total 4 references                                     51.071999
+
+****************************************
+Design: Xor_1share_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+
+****************************************
+Design: Xor_1share_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+
+****************************************
+Design: Xor_1share_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+
+****************************************
+Design: Xor_1share_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+
+****************************************
+Design: Xor_Dshare_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Xor_1share_1                     12.768000       1     12.768000  h
+Xor_1share_2                     12.768000       1     12.768000  h
+Xor_1share_3                     12.768000       1     12.768000  h
+Xor_1share_4                     12.768000       1     12.768000  h
+-----------------------------------------------------------------------------
+Total 4 references                                     51.071999
+
+****************************************
+Design: Xor_1share_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+
+****************************************
+Design: Xor_1share_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+
+****************************************
+Design: Xor_1share_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+
+****************************************
+Design: Xor_1share_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+
+****************************************
+Design: Xor_Dshare_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+Xor_1share_5                     12.768000       1     12.768000  h
+Xor_1share_6                     12.768000       1     12.768000  h
+Xor_1share_7                     12.768000       1     12.768000  h
+Xor_1share_8                     12.768000       1     12.768000  h
+-----------------------------------------------------------------------------
+Total 4 references                                     51.071999
+
+****************************************
+Design: Xor_1share_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+
+****************************************
+Design: Xor_1share_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+
+****************************************
+Design: Xor_1share_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+
+****************************************
+Design: Xor_1share_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       8    12.768000
+-----------------------------------------------------------------------------
+Total 1 references                                     12.768000
+1

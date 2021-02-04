@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : AES_128_shared
+Version: P-2019.03
+Date   : Mon Jun 22 13:31:34 2020
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /users/cosic/tnguyen/Documents/Synopsys/NangateOpenCellLibrary_PDKv1_3_v2010_12/Liberty/CCS/NangateOpenCellLibrary.db)
+
+Number of ports:                         3541
+Number of nets:                         45228
+Number of cells:                        41566
+Number of combinational cells:          40413
+Number of sequential cells:              1070
+Number of macros/black boxes:               0
+Number of buf/inv:                       4647
+Number of references:                      13
+
+Combinational area:              50195.794900
+Buf/Inv area:                     2869.873984
+Noncombinational area:            4838.539824
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 55034.334724
+Total area:                 undefined
+1

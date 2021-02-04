@@ -1,0 +1,4 @@
+source /users/micas/micas/design/scripts/synopsys_2019.03.rc
+
+dc_shell -gui&
+

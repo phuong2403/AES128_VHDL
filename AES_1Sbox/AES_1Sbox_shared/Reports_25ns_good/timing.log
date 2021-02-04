@@ -1,0 +1,490 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : AES_128_shared
+Version: P-2019.03
+Date   : Mon Jun 22 13:31:34 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: AES_Sbox/z26_reg_reg[1]
+              (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Endpoint: State_ar/state_ar_1/state_regs_reg[3][3][6]
+            (rising edge-triggered flip-flop clocked by ideal_clock1)
+  Path Group: ideal_clock1
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  AES_128_shared     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ideal_clock1 (rise edge)                          0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  AES_Sbox/z26_reg_reg[1]/CK (DFF_X1)                     0.00 #     0.00 r
+  AES_Sbox/z26_reg_reg[1]/Q (DFF_X1)                      0.10       0.10 r
+  AES_Sbox/p49/X0_1 (x49_shares)                          0.00       0.10 r
+  AES_Sbox/p49/U10220/ZN (NAND2_X1)                       0.10       0.20 f
+  AES_Sbox/p49/U8952/ZN (AND2_X1)                         0.07       0.27 f
+  AES_Sbox/p49/U6846/ZN (NOR2_X1)                         0.05       0.32 r
+  AES_Sbox/p49/U118/Z (XOR2_X1)                           0.08       0.40 r
+  AES_Sbox/p49/U10559/ZN (XNOR2_X1)                       0.07       0.47 r
+  AES_Sbox/p49/U10653/ZN (XNOR2_X1)                       0.07       0.54 r
+  AES_Sbox/p49/U10564/ZN (XNOR2_X1)                       0.07       0.60 r
+  AES_Sbox/p49/U10560/ZN (XNOR2_X1)                       0.07       0.67 r
+  AES_Sbox/p49/U10745/ZN (XNOR2_X1)                       0.07       0.73 r
+  AES_Sbox/p49/U10215/Z (XOR2_X1)                         0.08       0.81 r
+  AES_Sbox/p49/U3600/ZN (XNOR2_X1)                        0.07       0.88 r
+  AES_Sbox/p49/U18946/ZN (INV_X1)                         0.03       0.91 f
+  AES_Sbox/p49/U18945/ZN (OAI22_X1)                       0.05       0.96 r
+  AES_Sbox/p49/U17046/ZN (INV_X1)                         0.03       0.99 f
+  AES_Sbox/p49/U17126/ZN (OAI22_X1)                       0.05       1.05 r
+  AES_Sbox/p49/U3307/ZN (XNOR2_X1)                        0.07       1.12 r
+  AES_Sbox/p49/U3308/ZN (INV_X1)                          0.03       1.15 f
+  AES_Sbox/p49/U19070/ZN (OAI22_X1)                       0.05       1.20 r
+  AES_Sbox/p49/U18954/ZN (INV_X1)                         0.03       1.23 f
+  AES_Sbox/p49/U19040/ZN (OAI22_X1)                       0.06       1.29 r
+  AES_Sbox/p49/U10208/Z (XOR2_X1)                         0.09       1.38 r
+  AES_Sbox/p49/U19278/ZN (INV_X1)                         0.03       1.40 f
+  AES_Sbox/p49/U19277/ZN (OAI22_X1)                       0.06       1.47 r
+  AES_Sbox/p49/U19144/ZN (INV_X1)                         0.03       1.50 f
+  AES_Sbox/p49/U19120/ZN (AOI22_X1)                       0.06       1.56 r
+  AES_Sbox/p49/U19119/ZN (INV_X1)                         0.03       1.59 f
+  AES_Sbox/p49/U19118/ZN (OAI22_X1)                       0.05       1.64 r
+  AES_Sbox/p49/U3530/ZN (XNOR2_X1)                        0.07       1.71 r
+  AES_Sbox/p49/U3529/ZN (XNOR2_X1)                        0.07       1.78 r
+  AES_Sbox/p49/U10203/Z (XOR2_X1)                         0.08       1.86 r
+  AES_Sbox/p49/U10202/Z (XOR2_X1)                         0.08       1.94 r
+  AES_Sbox/p49/U10201/Z (XOR2_X1)                         0.08       2.02 r
+  AES_Sbox/p49/U797/ZN (XNOR2_X1)                         0.07       2.09 r
+  AES_Sbox/p49/U796/ZN (XNOR2_X1)                         0.07       2.16 r
+  AES_Sbox/p49/U19296/ZN (INV_X1)                         0.03       2.19 f
+  AES_Sbox/p49/U19295/ZN (AOI22_X1)                       0.06       2.25 r
+  AES_Sbox/p49/U19273/ZN (INV_X1)                         0.03       2.28 f
+  AES_Sbox/p49/U19272/ZN (AOI22_X1)                       0.07       2.35 r
+  AES_Sbox/p49/U19057/ZN (INV_X1)                         0.03       2.38 f
+  AES_Sbox/p49/U19056/ZN (AOI22_X1)                       0.07       2.45 r
+  AES_Sbox/p49/U19063/ZN (INV_X1)                         0.03       2.48 f
+  AES_Sbox/p49/U19158/ZN (OAI22_X1)                       0.06       2.53 r
+  AES_Sbox/p49/U10195/Z (XOR2_X1)                         0.09       2.62 r
+  AES_Sbox/p49/U19105/ZN (INV_X1)                         0.03       2.65 f
+  AES_Sbox/p49/U19314/ZN (AOI22_X1)                       0.06       2.71 r
+  AES_Sbox/p49/U19313/ZN (INV_X1)                         0.03       2.74 f
+  AES_Sbox/p49/U19312/ZN (OAI22_X1)                       0.06       2.80 r
+  AES_Sbox/p49/U19254/ZN (INV_X1)                         0.03       2.83 f
+  AES_Sbox/p49/U19324/ZN (AOI22_X1)                       0.06       2.89 r
+  AES_Sbox/p49/U19323/ZN (INV_X1)                         0.03       2.92 f
+  AES_Sbox/p49/U19320/ZN (OAI22_X1)                       0.07       2.98 r
+  AES_Sbox/p49/U19319/ZN (INV_X1)                         0.03       3.01 f
+  AES_Sbox/p49/U19318/ZN (OAI22_X1)                       0.06       3.07 r
+  AES_Sbox/p49/U19280/ZN (INV_X1)                         0.03       3.09 f
+  AES_Sbox/p49/U19279/ZN (OAI22_X1)                       0.06       3.15 r
+  AES_Sbox/p49/U16201/ZN (INV_X1)                         0.03       3.18 f
+  AES_Sbox/p49/U19048/ZN (OAI22_X1)                       0.06       3.23 r
+  AES_Sbox/p49/U19047/ZN (INV_X1)                         0.03       3.26 f
+  AES_Sbox/p49/U19326/ZN (AOI22_X1)                       0.06       3.32 r
+  AES_Sbox/p49/U19325/ZN (INV_X1)                         0.03       3.35 f
+  AES_Sbox/p49/U19311/ZN (OAI22_X1)                       0.07       3.42 r
+  AES_Sbox/p49/U19310/ZN (INV_X1)                         0.03       3.44 f
+  AES_Sbox/p49/U19309/ZN (OAI22_X1)                       0.06       3.50 r
+  AES_Sbox/p49/U19274/ZN (INV_X1)                         0.03       3.53 f
+  AES_Sbox/p49/U17027/ZN (AOI22_X1)                       0.06       3.59 r
+  AES_Sbox/p49/U17005/ZN (INV_X1)                         0.03       3.61 f
+  AES_Sbox/p49/U17977/ZN (AOI22_X1)                       0.07       3.69 r
+  AES_Sbox/p49/U17976/ZN (INV_X1)                         0.03       3.71 f
+  AES_Sbox/p49/U19302/ZN (AOI22_X1)                       0.07       3.79 r
+  AES_Sbox/p49/U19301/ZN (INV_X1)                         0.03       3.81 f
+  AES_Sbox/p49/U19300/ZN (AOI22_X1)                       0.07       3.89 r
+  AES_Sbox/p49/U18939/ZN (INV_X1)                         0.03       3.91 f
+  AES_Sbox/p49/U18938/ZN (OAI22_X1)                       0.06       3.97 r
+  AES_Sbox/p49/U10181/Z (XOR2_X1)                         0.09       4.06 r
+  AES_Sbox/p49/U18952/ZN (INV_X1)                         0.03       4.09 f
+  AES_Sbox/p49/U19053/ZN (AOI22_X1)                       0.06       4.15 r
+  AES_Sbox/p49/U19304/ZN (INV_X1)                         0.03       4.18 f
+  AES_Sbox/p49/U19303/ZN (AOI22_X1)                       0.07       4.25 r
+  AES_Sbox/p49/U19042/ZN (INV_X1)                         0.03       4.28 f
+  AES_Sbox/p49/U19055/ZN (OAI22_X1)                       0.05       4.33 r
+  AES_Sbox/p49/U10178/Z (XOR2_X1)                         0.08       4.41 r
+  AES_Sbox/p49/U3933/ZN (XNOR2_X1)                        0.07       4.47 r
+  AES_Sbox/p49/U3932/ZN (XNOR2_X1)                        0.07       4.54 r
+  AES_Sbox/p49/U10174/Z (XOR2_X1)                         0.08       4.62 r
+  AES_Sbox/p49/U10173/Z (XOR2_X1)                         0.09       4.71 r
+  AES_Sbox/p49/U19269/ZN (INV_X1)                         0.03       4.73 f
+  AES_Sbox/p49/U19268/ZN (OAI22_X1)                       0.06       4.79 r
+  AES_Sbox/p49/U16430/ZN (XNOR2_X1)                       0.07       4.86 r
+  AES_Sbox/p49/U10171/ZN (NAND3_X1)                       0.04       4.91 f
+  AES_Sbox/p49/U19289/ZN (OAI21_X1)                       0.04       4.95 r
+  AES_Sbox/p49/U19291/ZN (INV_X1)                         0.03       4.98 f
+  AES_Sbox/p49/U19290/ZN (AOI22_X1)                       0.05       5.03 r
+  AES_Sbox/p49/U18927/ZN (XNOR2_X1)                       0.07       5.10 r
+  AES_Sbox/p49/U10170/ZN (NAND3_X1)                       0.04       5.14 f
+  AES_Sbox/p49/U19263/ZN (OAI21_X1)                       0.04       5.19 r
+  AES_Sbox/p49/U3958/ZN (XNOR2_X1)                        0.07       5.25 r
+  AES_Sbox/p49/U3957/ZN (XNOR2_X1)                        0.07       5.32 r
+  AES_Sbox/p49/U10163/Z (XOR2_X1)                         0.08       5.40 r
+  AES_Sbox/p49/U10162/Z (XOR2_X1)                         0.08       5.47 r
+  AES_Sbox/p49/U10160/Z (XOR2_X1)                         0.08       5.55 r
+  AES_Sbox/p49/U10156/Z (XOR2_X1)                         0.08       5.63 r
+  AES_Sbox/p49/U992/ZN (XNOR2_X1)                         0.07       5.70 r
+  AES_Sbox/p49/U991/ZN (XNOR2_X1)                         0.07       5.76 r
+  AES_Sbox/p49/U10150/Z (XOR2_X1)                         0.08       5.84 r
+  AES_Sbox/p49/U19142/ZN (XNOR2_X1)                       0.07       5.91 r
+  AES_Sbox/p49/U10149/Z (XOR2_X1)                         0.09       6.00 r
+  AES_Sbox/p49/U19265/ZN (INV_X1)                         0.03       6.02 f
+  AES_Sbox/p49/U19264/ZN (OAI22_X1)                       0.06       6.09 r
+  AES_Sbox/p49/U3845/ZN (XNOR2_X1)                        0.07       6.16 r
+  AES_Sbox/p49/U3844/ZN (XNOR2_X1)                        0.07       6.23 r
+  AES_Sbox/p49/U10146/Z (XOR2_X1)                         0.08       6.31 r
+  AES_Sbox/p49/U10145/Z (XOR2_X1)                         0.08       6.39 r
+  AES_Sbox/p49/U10144/Z (XOR2_X1)                         0.08       6.47 r
+  AES_Sbox/p49/U10143/Z (XOR2_X1)                         0.08       6.55 r
+  AES_Sbox/p49/U19116/ZN (XNOR2_X1)                       0.07       6.61 r
+  AES_Sbox/p49/U10142/Z (XOR2_X1)                         0.08       6.69 r
+  AES_Sbox/p49/U800/ZN (XNOR2_X1)                         0.07       6.76 r
+  AES_Sbox/p49/U799/ZN (XNOR2_X1)                         0.07       6.83 r
+  AES_Sbox/p49/U10138/Z (XOR2_X1)                         0.09       6.91 r
+  AES_Sbox/p49/U19306/ZN (INV_X1)                         0.03       6.94 f
+  AES_Sbox/p49/U19305/ZN (AOI22_X1)                       0.06       7.00 r
+  AES_Sbox/p49/U18934/ZN (INV_X1)                         0.03       7.03 f
+  AES_Sbox/p49/U18933/ZN (OAI22_X1)                       0.05       7.08 r
+  AES_Sbox/p49/U10136/Z (XOR2_X1)                         0.08       7.16 r
+  AES_Sbox/p49/U10134/Z (XOR2_X1)                         0.08       7.24 r
+  AES_Sbox/p49/U942/ZN (XNOR2_X1)                         0.07       7.31 r
+  AES_Sbox/p49/U941/ZN (XNOR2_X1)                         0.07       7.37 r
+  AES_Sbox/p49/U10128/Z (XOR2_X1)                         0.08       7.45 r
+  AES_Sbox/p49/U10127/Z (XOR2_X1)                         0.08       7.53 r
+  AES_Sbox/p49/U10126/Z (XOR2_X1)                         0.09       7.62 r
+  AES_Sbox/p49/U19259/ZN (INV_X1)                         0.03       7.65 f
+  AES_Sbox/p49/U19145/ZN (OAI22_X1)                       0.06       7.71 r
+  AES_Sbox/p49/U645/ZN (XNOR2_X1)                         0.07       7.78 r
+  AES_Sbox/p49/U644/ZN (XNOR2_X1)                         0.07       7.85 r
+  AES_Sbox/p49/U10123/Z (XOR2_X1)                         0.08       7.93 r
+  AES_Sbox/p49/U695/ZN (XNOR2_X1)                         0.07       8.00 r
+  AES_Sbox/p49/U694/ZN (XNOR2_X1)                         0.07       8.07 r
+  AES_Sbox/p49/U19062/ZN (INV_X1)                         0.03       8.10 f
+  AES_Sbox/p49/U19061/ZN (OAI22_X1)                       0.06       8.16 r
+  AES_Sbox/p49/U16545/ZN (XNOR2_X1)                       0.07       8.23 r
+  AES_Sbox/p49/U3341/ZN (XNOR2_X1)                        0.07       8.30 r
+  AES_Sbox/p49/U3342/ZN (INV_X1)                          0.03       8.33 f
+  AES_Sbox/p49/U18944/ZN (OAI22_X1)                       0.05       8.38 r
+  AES_Sbox/p49/U10630/ZN (INV_X1)                         0.03       8.41 f
+  AES_Sbox/p49/U19137/ZN (AOI22_X1)                       0.06       8.48 r
+  AES_Sbox/p49/U19136/ZN (INV_X1)                         0.03       8.50 f
+  AES_Sbox/p49/U19135/ZN (OAI22_X1)                       0.06       8.57 r
+  AES_Sbox/p49/U18956/ZN (INV_X1)                         0.03       8.59 f
+  AES_Sbox/p49/U19138/ZN (OAI22_X1)                       0.06       8.65 r
+  AES_Sbox/p49/U10118/Z (XOR2_X1)                         0.09       8.74 r
+  AES_Sbox/p49/U19257/ZN (INV_X1)                         0.03       8.77 f
+  AES_Sbox/p49/U19065/ZN (OAI22_X1)                       0.06       8.83 r
+  AES_Sbox/p49/U19064/ZN (INV_X1)                         0.03       8.86 f
+  AES_Sbox/p49/U19157/ZN (AOI22_X1)                       0.06       8.92 r
+  AES_Sbox/p49/U19156/ZN (INV_X1)                         0.03       8.95 f
+  AES_Sbox/p49/U19338/ZN (OAI22_X1)                       0.06       9.01 r
+  AES_Sbox/p49/U19337/ZN (INV_X1)                         0.03       9.04 f
+  AES_Sbox/p49/U19336/ZN (OAI22_X1)                       0.07       9.11 r
+  AES_Sbox/p49/U19335/ZN (INV_X1)                         0.03       9.14 f
+  AES_Sbox/p49/U19334/ZN (OAI22_X1)                       0.07       9.21 r
+  AES_Sbox/p49/U19262/ZN (INV_X1)                         0.03       9.24 f
+  AES_Sbox/p49/U19132/ZN (OAI22_X1)                       0.07       9.31 r
+  AES_Sbox/p49/U19113/ZN (INV_X1)                         0.03       9.34 f
+  AES_Sbox/p49/U19124/ZN (OAI22_X1)                       0.07       9.42 r
+  AES_Sbox/p49/U19123/ZN (INV_X1)                         0.03       9.44 f
+  AES_Sbox/p49/U19122/ZN (OAI22_X1)                       0.07       9.52 r
+  AES_Sbox/p49/U19050/ZN (INV_X1)                         0.03       9.54 f
+  AES_Sbox/p49/U19049/ZN (OAI22_X1)                       0.07       9.62 r
+  AES_Sbox/p49/U17861/ZN (INV_X1)                         0.03       9.65 f
+  AES_Sbox/p49/U17836/ZN (OAI22_X1)                       0.06       9.71 r
+  AES_Sbox/p49/U10116/Z (XOR2_X1)                         0.09       9.80 r
+  AES_Sbox/p49/U19148/ZN (INV_X1)                         0.03       9.82 f
+  AES_Sbox/p49/U19147/ZN (OAI22_X1)                       0.07       9.90 r
+  AES_Sbox/p49/U19131/ZN (INV_X1)                         0.03       9.93 f
+  AES_Sbox/p49/U19130/ZN (OAI22_X1)                       0.07      10.00 r
+  AES_Sbox/p49/U18948/ZN (INV_X1)                         0.03      10.03 f
+  AES_Sbox/p49/U18947/ZN (OAI22_X1)                       0.07      10.10 r
+  AES_Sbox/p49/U17970/ZN (INV_X1)                         0.03      10.13 f
+  AES_Sbox/p49/U18940/ZN (OAI22_X1)                       0.06      10.19 r
+  AES_Sbox/p49/U10115/Z (XOR2_X1)                         0.09      10.28 r
+  AES_Sbox/p49/U19256/ZN (INV_X1)                         0.03      10.31 f
+  AES_Sbox/p49/U19149/ZN (OAI22_X1)                       0.06      10.37 r
+  AES_Sbox/p49/U19111/ZN (INV_X1)                         0.03      10.40 f
+  AES_Sbox/p49/U19108/ZN (OAI22_X1)                       0.07      10.47 r
+  AES_Sbox/p49/U19107/ZN (INV_X1)                         0.03      10.50 f
+  AES_Sbox/p49/U19106/ZN (OAI22_X1)                       0.07      10.57 r
+  AES_Sbox/p49/U19041/ZN (INV_X1)                         0.03      10.60 f
+  AES_Sbox/p49/U10252/ZN (AOI22_X1)                       0.06      10.66 r
+  AES_Sbox/p49/U10227/ZN (INV_X1)                         0.03      10.69 f
+  AES_Sbox/p49/U12639/ZN (OAI22_X1)                       0.05      10.75 r
+  AES_Sbox/p49/U556/ZN (XNOR2_X1)                         0.07      10.82 r
+  AES_Sbox/p49/U557/ZN (INV_X1)                           0.03      10.85 f
+  AES_Sbox/p49/U19125/ZN (OAI22_X1)                       0.05      10.90 r
+  AES_Sbox/p49/U17042/ZN (INV_X1)                         0.03      10.93 f
+  AES_Sbox/p49/U17203/ZN (OAI22_X1)                       0.06      10.99 r
+  AES_Sbox/p49/U10111/Z (XOR2_X1)                         0.09      11.07 r
+  AES_Sbox/p49/U16517/ZN (INV_X1)                         0.03      11.10 f
+  AES_Sbox/p49/U17990/ZN (OAI22_X1)                       0.06      11.16 r
+  AES_Sbox/p49/U10109/Z (XOR2_X1)                         0.09      11.25 r
+  AES_Sbox/p49/U17161/ZN (INV_X1)                         0.03      11.27 f
+  AES_Sbox/p49/U19152/ZN (OAI22_X1)                       0.07      11.35 r
+  AES_Sbox/p49/U19151/ZN (INV_X1)                         0.03      11.37 f
+  AES_Sbox/p49/U19150/ZN (OAI22_X1)                       0.07      11.44 r
+  AES_Sbox/p49/U19134/ZN (INV_X1)                         0.03      11.47 f
+  AES_Sbox/p49/U19133/ZN (OAI22_X1)                       0.07      11.53 r
+  AES_Sbox/p49/U18955/ZN (INV_X1)                         0.03      11.56 f
+  AES_Sbox/p49/U19058/ZN (OAI22_X1)                       0.06      11.62 r
+  AES_Sbox/p49/U558/ZN (XNOR2_X1)                         0.07      11.69 r
+  AES_Sbox/p49/U559/ZN (INV_X1)                           0.03      11.72 f
+  AES_Sbox/p49/U19284/ZN (OAI22_X1)                       0.05      11.77 r
+  AES_Sbox/p49/U18932/ZN (INV_X1)                         0.03      11.80 f
+  AES_Sbox/p49/U18931/ZN (OAI22_X1)                       0.06      11.86 r
+  AES_Sbox/p49/U686/ZN (XNOR2_X1)                         0.07      11.92 r
+  AES_Sbox/p49/U685/ZN (XNOR2_X1)                         0.07      12.00 r
+  AES_Sbox/p49/U19267/ZN (INV_X1)                         0.03      12.02 f
+  AES_Sbox/p49/U19266/ZN (OAI22_X1)                       0.06      12.09 r
+  AES_Sbox/p49/U854/ZN (XNOR2_X1)                         0.07      12.16 r
+  AES_Sbox/p49/U853/ZN (XNOR2_X1)                         0.07      12.22 r
+  AES_Sbox/p49/U10099/Z (XOR2_X1)                         0.08      12.30 r
+  AES_Sbox/p49/U3795/ZN (XNOR2_X1)                        0.07      12.37 r
+  AES_Sbox/p49/U3794/ZN (XNOR2_X1)                        0.07      12.44 r
+  AES_Sbox/p49/U10096/Z (XOR2_X1)                         0.08      12.52 r
+  AES_Sbox/p49/U10095/Z (XOR2_X1)                         0.08      12.60 r
+  AES_Sbox/p49/U10094/Z (XOR2_X1)                         0.08      12.68 r
+  AES_Sbox/p49/U989/ZN (XNOR2_X1)                         0.07      12.75 r
+  AES_Sbox/p49/U988/ZN (XNOR2_X1)                         0.07      12.81 r
+  AES_Sbox/p49/U987/ZN (XNOR2_X1)                         0.07      12.88 r
+  AES_Sbox/p49/U10087/Z (XOR2_X1)                         0.08      12.96 r
+  AES_Sbox/p49/U16434/ZN (XNOR2_X1)                       0.07      13.02 r
+  AES_Sbox/p49/U10086/Z (XOR2_X1)                         0.09      13.11 r
+  AES_Sbox/p49/U17820/ZN (INV_X1)                         0.03      13.14 f
+  AES_Sbox/p49/U17815/ZN (OAI22_X1)                       0.06      13.20 r
+  AES_Sbox/p49/U10085/Z (XOR2_X1)                         0.09      13.29 r
+  AES_Sbox/p49/U17061/ZN (INV_X1)                         0.03      13.32 f
+  AES_Sbox/p49/U17054/ZN (OAI22_X1)                       0.06      13.38 r
+  AES_Sbox/p49/U681/Z (XOR2_X1)                           0.08      13.46 r
+  AES_Sbox/p49/U680/ZN (XNOR2_X1)                         0.07      13.53 r
+  AES_Sbox/p49/U18943/ZN (INV_X1)                         0.03      13.56 f
+  AES_Sbox/p49/U18951/ZN (OAI22_X1)                       0.06      13.62 r
+  AES_Sbox/p49/U10083/Z (XOR2_X1)                         0.09      13.71 r
+  AES_Sbox/p49/U18953/ZN (INV_X1)                         0.03      13.74 f
+  AES_Sbox/p49/U19039/ZN (OAI22_X1)                       0.06      13.80 r
+  AES_Sbox/p49/U10082/Z (XOR2_X1)                         0.09      13.89 r
+  AES_Sbox/p49/U19060/ZN (INV_X1)                         0.03      13.92 f
+  AES_Sbox/p49/U19059/ZN (OAI22_X1)                       0.06      13.98 r
+  AES_Sbox/p49/U16544/ZN (XNOR2_X1)                       0.07      14.05 r
+  AES_Sbox/p49/U10081/Z (XOR2_X1)                         0.08      14.13 r
+  AES_Sbox/p49/U860/ZN (XNOR2_X1)                         0.07      14.20 r
+  AES_Sbox/p49/U859/ZN (XNOR2_X1)                         0.07      14.27 r
+  AES_Sbox/p49/U10078/Z (XOR2_X1)                         0.08      14.35 r
+  AES_Sbox/p49/U10077/Z (XOR2_X1)                         0.08      14.43 r
+  AES_Sbox/p49/U10076/Z (XOR2_X1)                         0.09      14.52 r
+  AES_Sbox/p49/U19255/ZN (INV_X1)                         0.03      14.54 f
+  AES_Sbox/p49/U19143/ZN (OAI22_X1)                       0.06      14.61 r
+  AES_Sbox/p49/U18937/ZN (XNOR2_X1)                       0.07      14.68 r
+  AES_Sbox/p49/U84/Z (XOR2_X1)                            0.08      14.76 r
+  AES_Sbox/p49/U10074/Z (XOR2_X1)                         0.09      14.85 r
+  AES_Sbox/p49/U19308/ZN (INV_X1)                         0.03      14.87 f
+  AES_Sbox/p49/U19307/ZN (OAI22_X1)                       0.07      14.95 r
+  AES_Sbox/p49/U19104/ZN (INV_X1)                         0.03      14.97 f
+  AES_Sbox/p49/U19317/ZN (AOI22_X1)                       0.06      15.03 r
+  AES_Sbox/p49/U19316/ZN (INV_X1)                         0.03      15.06 f
+  AES_Sbox/p49/U19315/ZN (OAI22_X1)                       0.05      15.12 r
+  AES_Sbox/p49/U19046/ZN (INV_X1)                         0.03      15.15 f
+  AES_Sbox/p49/U19121/ZN (AOI22_X1)                       0.06      15.21 r
+  AES_Sbox/p49/U19276/ZN (INV_X1)                         0.03      15.23 f
+  AES_Sbox/p49/U19275/ZN (AOI22_X1)                       0.07      15.31 r
+  AES_Sbox/p49/U19141/ZN (INV_X1)                         0.03      15.33 f
+  AES_Sbox/p49/U19140/ZN (OAI22_X1)                       0.05      15.38 r
+  AES_Sbox/p49/U10070/Z (XOR2_X1)                         0.08      15.46 r
+  AES_Sbox/p49/U10069/Z (XOR2_X1)                         0.08      15.54 r
+  AES_Sbox/p49/U10068/Z (XOR2_X1)                         0.08      15.62 r
+  AES_Sbox/p49/U1138/ZN (XNOR2_X1)                        0.07      15.70 r
+  AES_Sbox/p49/U1139/ZN (INV_X1)                          0.03      15.72 f
+  AES_Sbox/p49/U19288/ZN (OAI22_X1)                       0.05      15.77 r
+  AES_Sbox/p49/U10066/Z (XOR2_X1)                         0.08      15.85 r
+  AES_Sbox/p49/U10065/Z (XOR2_X1)                         0.08      15.93 r
+  AES_Sbox/p49/U10064/Z (XOR2_X1)                         0.08      16.01 r
+  AES_Sbox/p49/U10063/Z (XOR2_X1)                         0.08      16.09 r
+  AES_Sbox/p49/U1040/ZN (XNOR2_X1)                        0.07      16.16 r
+  AES_Sbox/p49/U1039/ZN (XNOR2_X1)                        0.07      16.23 r
+  AES_Sbox/p49/U19102/ZN (XNOR2_X1)                       0.07      16.30 r
+  AES_Sbox/p49/U543/ZN (XNOR2_X1)                         0.07      16.37 r
+  AES_Sbox/p49/U544/ZN (INV_X1)                           0.03      16.39 f
+  AES_Sbox/p49/U19146/ZN (OAI22_X1)                       0.05      16.45 r
+  AES_Sbox/p49/U19129/ZN (INV_X1)                         0.03      16.48 f
+  AES_Sbox/p49/U19128/ZN (OAI22_X1)                       0.07      16.55 r
+  AES_Sbox/p49/U19072/ZN (INV_X1)                         0.03      16.58 f
+  AES_Sbox/p49/U19071/ZN (OAI22_X1)                       0.07      16.65 r
+  AES_Sbox/p49/U17956/ZN (INV_X1)                         0.03      16.68 f
+  AES_Sbox/p49/U17950/ZN (OAI22_X1)                       0.06      16.74 r
+  AES_Sbox/p49/U550/ZN (XNOR2_X1)                         0.07      16.82 r
+  AES_Sbox/p49/U551/ZN (INV_X1)                           0.03      16.84 f
+  AES_Sbox/p49/U19283/ZN (OAI22_X1)                       0.05      16.90 r
+  AES_Sbox/p49/U19282/ZN (INV_X1)                         0.03      16.93 f
+  AES_Sbox/p49/U19281/ZN (OAI22_X1)                       0.07      17.00 r
+  AES_Sbox/p49/U19127/ZN (INV_X1)                         0.03      17.03 f
+  AES_Sbox/p49/U19126/ZN (OAI22_X1)                       0.07      17.10 r
+  AES_Sbox/p49/U19067/ZN (INV_X1)                         0.03      17.13 f
+  AES_Sbox/p49/U19066/ZN (OAI22_X1)                       0.07      17.20 r
+  AES_Sbox/p49/U18942/ZN (INV_X1)                         0.03      17.23 f
+  AES_Sbox/p49/U18941/ZN (OAI22_X1)                       0.05      17.28 r
+  AES_Sbox/p49/U17960/ZN (XNOR2_X1)                       0.07      17.35 r
+  AES_Sbox/p49/U3305/ZN (XNOR2_X1)                        0.07      17.42 r
+  AES_Sbox/p49/U3306/ZN (INV_X1)                          0.03      17.45 f
+  AES_Sbox/p49/U19331/ZN (OAI22_X1)                       0.05      17.50 r
+  AES_Sbox/p49/U19330/ZN (INV_X1)                         0.03      17.53 f
+  AES_Sbox/p49/U19329/ZN (OAI22_X1)                       0.07      17.60 r
+  AES_Sbox/p49/U19333/ZN (INV_X1)                         0.03      17.63 f
+  AES_Sbox/p49/U19332/ZN (OAI22_X1)                       0.07      17.70 r
+  AES_Sbox/p49/U19286/ZN (INV_X1)                         0.03      17.73 f
+  AES_Sbox/p49/U19285/ZN (OAI22_X1)                       0.07      17.80 r
+  AES_Sbox/p49/U19110/ZN (INV_X1)                         0.03      17.83 f
+  AES_Sbox/p49/U19109/ZN (OAI22_X1)                       0.07      17.90 r
+  AES_Sbox/p49/U19044/ZN (INV_X1)                         0.03      17.93 f
+  AES_Sbox/p49/U19043/ZN (OAI22_X1)                       0.07      18.00 r
+  AES_Sbox/p49/U18926/ZN (INV_X1)                         0.03      18.03 f
+  AES_Sbox/p49/U19115/ZN (AOI22_X1)                       0.06      18.10 r
+  AES_Sbox/p49/U677/ZN (XNOR2_X1)                         0.07      18.17 r
+  AES_Sbox/p49/U678/ZN (INV_X1)                           0.03      18.20 f
+  AES_Sbox/p49/U19139/ZN (OAI22_X1)                       0.05      18.24 r
+  AES_Sbox/p49/U10055/Z (XOR2_X1)                         0.09      18.33 r
+  AES_Sbox/p49/U19258/ZN (INV_X1)                         0.03      18.36 f
+  AES_Sbox/p49/U19052/ZN (OAI22_X1)                       0.07      18.43 r
+  AES_Sbox/p49/U19051/ZN (INV_X1)                         0.03      18.46 f
+  AES_Sbox/p49/U19328/ZN (OAI22_X1)                       0.07      18.52 r
+  AES_Sbox/p49/U19327/ZN (INV_X1)                         0.03      18.55 f
+  AES_Sbox/p49/U19069/ZN (OAI22_X1)                       0.07      18.62 r
+  AES_Sbox/p49/U19068/ZN (INV_X1)                         0.03      18.65 f
+  AES_Sbox/p49/U18930/ZN (OAI22_X1)                       0.07      18.71 r
+  AES_Sbox/p49/U18929/ZN (INV_X1)                         0.03      18.74 f
+  AES_Sbox/p49/U18928/ZN (OAI22_X1)                       0.06      18.80 r
+  AES_Sbox/p49/U3999/ZN (XNOR2_X1)                        0.07      18.87 r
+  AES_Sbox/p49/U10053/Z (XOR2_X1)                         0.09      18.95 r
+  AES_Sbox/p49/U17811/ZN (INV_X1)                         0.03      18.98 f
+  AES_Sbox/p49/U17122/ZN (AOI22_X1)                       0.06      19.04 r
+  AES_Sbox/p49/U10557/ZN (INV_X1)                         0.03      19.07 f
+  AES_Sbox/p49/U19299/ZN (AOI22_X1)                       0.07      19.14 r
+  AES_Sbox/p49/U19298/ZN (INV_X1)                         0.03      19.17 f
+  AES_Sbox/p49/U19297/ZN (AOI22_X1)                       0.07      19.24 r
+  AES_Sbox/p49/U12654/ZN (INV_X1)                         0.03      19.27 f
+  AES_Sbox/p49/U18949/ZN (OAI22_X1)                       0.05      19.31 r
+  AES_Sbox/p49/U3610/ZN (XNOR2_X1)                        0.07      19.39 r
+  AES_Sbox/p49/U17975/ZN (INV_X1)                         0.03      19.41 f
+  AES_Sbox/p49/U19038/ZN (OAI22_X1)                       0.06      19.47 r
+  AES_Sbox/p49/U10049/Z (XOR2_X1)                         0.08      19.55 r
+  AES_Sbox/p49/U10048/Z (XOR2_X1)                         0.08      19.63 r
+  AES_Sbox/p49/U728/ZN (XNOR2_X1)                         0.07      19.70 r
+  AES_Sbox/p49/U727/ZN (XNOR2_X1)                         0.07      19.77 r
+  AES_Sbox/p49/U18936/ZN (INV_X1)                         0.03      19.80 f
+  AES_Sbox/p49/U18935/ZN (OAI22_X1)                       0.06      19.87 r
+  AES_Sbox/p49/U10045/Z (XOR2_X1)                         0.08      19.95 r
+  AES_Sbox/p49/U10044/Z (XOR2_X1)                         0.09      20.04 r
+  AES_Sbox/p49/U19112/ZN (INV_X1)                         0.03      20.06 f
+  AES_Sbox/p49/U19155/ZN (OAI22_X1)                       0.07      20.14 r
+  AES_Sbox/p49/U19154/ZN (INV_X1)                         0.03      20.16 f
+  AES_Sbox/p49/U19153/ZN (OAI22_X1)                       0.07      20.23 r
+  AES_Sbox/p49/U16221/ZN (INV_X1)                         0.03      20.26 f
+  AES_Sbox/p49/U12548/ZN (OAI22_X1)                       0.06      20.31 r
+  AES_Sbox/p49/U10043/Z (XOR2_X1)                         0.08      20.40 r
+  AES_Sbox/p49/U789/ZN (XNOR2_X1)                         0.07      20.46 r
+  AES_Sbox/p49/U788/ZN (XNOR2_X1)                         0.07      20.53 r
+  AES_Sbox/p49/U10040/Z (XOR2_X1)                         0.09      20.62 r
+  AES_Sbox/p49/U19260/ZN (INV_X1)                         0.03      20.64 f
+  AES_Sbox/p49/U18950/ZN (OAI22_X1)                       0.06      20.70 r
+  AES_Sbox/p49/U655/ZN (XNOR2_X1)                         0.07      20.78 r
+  AES_Sbox/p49/U656/ZN (INV_X1)                           0.03      20.80 f
+  AES_Sbox/p49/U17962/ZN (OAI22_X1)                       0.05      20.85 r
+  AES_Sbox/p49/U520/ZN (XNOR2_X1)                         0.07      20.92 r
+  AES_Sbox/p49/U521/ZN (INV_X1)                           0.03      20.95 f
+  AES_Sbox/p49/U19045/ZN (OAI22_X1)                       0.06      21.01 r
+  AES_Sbox/p49/U10648/ZN (INV_X1)                         0.03      21.03 f
+  AES_Sbox/p49/U19287/ZN (OAI22_X1)                       0.06      21.09 r
+  AES_Sbox/p49/U10037/Z (XOR2_X1)                         0.09      21.18 r
+  AES_Sbox/p49/U19114/ZN (INV_X1)                         0.03      21.21 f
+  AES_Sbox/p49/U19322/ZN (OAI22_X1)                       0.07      21.27 r
+  AES_Sbox/p49/U19321/ZN (INV_X1)                         0.03      21.30 f
+  AES_Sbox/p49/U19294/ZN (OAI22_X1)                       0.07      21.36 r
+  AES_Sbox/p49/U19293/ZN (INV_X1)                         0.03      21.39 f
+  AES_Sbox/p49/U19292/ZN (OAI22_X1)                       0.06      21.45 r
+  AES_Sbox/p49/U16333/ZN (XNOR2_X1)                       0.07      21.52 r
+  AES_Sbox/p49/U10036/Z (XOR2_X1)                         0.08      21.60 r
+  AES_Sbox/p49/U944/ZN (XNOR2_X1)                         0.07      21.67 r
+  AES_Sbox/p49/U943/ZN (XNOR2_X1)                         0.07      21.73 r
+  AES_Sbox/p49/U10030/Z (XOR2_X1)                         0.08      21.81 r
+  AES_Sbox/p49/U10026/Z (XOR2_X1)                         0.08      21.89 r
+  AES_Sbox/p49/U10025/Z (XOR2_X1)                         0.08      21.97 r
+  AES_Sbox/p49/U10024/Z (XOR2_X1)                         0.08      22.04 r
+  AES_Sbox/p49/U946/ZN (XNOR2_X1)                         0.07      22.11 r
+  AES_Sbox/p49/U945/ZN (XNOR2_X1)                         0.07      22.18 r
+  AES_Sbox/p49/U10020/Z (XOR2_X1)                         0.08      22.26 r
+  AES_Sbox/p49/U10017/Z (XOR2_X1)                         0.08      22.33 r
+  AES_Sbox/p49/U10016/Z (XOR2_X1)                         0.08      22.41 r
+  AES_Sbox/p49/U10015/Z (XOR2_X1)                         0.08      22.49 r
+  AES_Sbox/p49/U10014/Z (XOR2_X1)                         0.08      22.57 r
+  AES_Sbox/p49/U10013/Z (XOR2_X1)                         0.08      22.65 r
+  AES_Sbox/p49/U948/ZN (XNOR2_X1)                         0.07      22.72 r
+  AES_Sbox/p49/U947/ZN (XNOR2_X1)                         0.07      22.78 r
+  AES_Sbox/p49/U10008/Z (XOR2_X1)                         0.08      22.86 r
+  AES_Sbox/p49/U10007/Z (XOR2_X1)                         0.09      22.95 r
+  AES_Sbox/p49/U19271/ZN (INV_X1)                         0.03      22.98 f
+  AES_Sbox/p49/U19270/ZN (OAI22_X1)                       0.05      23.03 r
+  AES_Sbox/p49/U19054/ZN (XNOR2_X1)                       0.07      23.10 r
+  AES_Sbox/p49/U10502/ZN (XNOR2_X1)                       0.07      23.17 r
+  AES_Sbox/p49/U10500/ZN (XNOR2_X1)                       0.07      23.24 r
+  AES_Sbox/p49/U10567/ZN (XNOR2_X1)                       0.07      23.30 r
+  AES_Sbox/p49/U10004/Z (XOR2_X1)                         0.08      23.38 r
+  AES_Sbox/p49/U730/ZN (XNOR2_X1)                         0.07      23.45 r
+  AES_Sbox/p49/U729/ZN (XNOR2_X1)                         0.07      23.52 r
+  AES_Sbox/p49/U19103/ZN (INV_X1)                         0.03      23.55 f
+  AES_Sbox/p49/U19117/ZN (OAI22_X1)                       0.06      23.61 r
+  AES_Sbox/p49/U10001/Z (XOR2_X1)                         0.08      23.70 r
+  AES_Sbox/p49/U10000/Z (XOR2_X1)                         0.08      23.78 r
+  AES_Sbox/p49/U775/ZN (XNOR2_X1)                         0.07      23.84 r
+  AES_Sbox/p49/U774/ZN (XNOR2_X1)                         0.07      23.91 r
+  AES_Sbox/p49/U9997/Z (XOR2_X1)                          0.09      24.00 r
+  AES_Sbox/p49/U19261/ZN (INV_X1)                         0.03      24.03 f
+  AES_Sbox/p49/U19037/ZN (OAI22_X1)                       0.06      24.08 r
+  AES_Sbox/p49/U632/ZN (XNOR2_X1)                         0.07      24.15 r
+  AES_Sbox/p49/U631/ZN (XNOR2_X1)                         0.07      24.23 r
+  AES_Sbox/p49/F51 (x49_shares)                           0.00      24.23 r
+  AES_Sbox/pAff/X51 (affine)                              0.00      24.23 r
+  AES_Sbox/pAff/U65/Z (XOR2_X1)                           0.10      24.33 r
+  AES_Sbox/pAff/U25/Z (XOR2_X1)                           0.10      24.43 r
+  AES_Sbox/pAff/U24/Z (XOR2_X1)                           0.09      24.52 r
+  AES_Sbox/pAff/F61 (affine)                              0.00      24.52 r
+  AES_Sbox/F61 (Sbox_shared)                              0.00      24.52 r
+  mux_state/i_a[1][6] (Mux2_Dshare_2)                     0.00      24.52 r
+  mux_state/mux_1/i_a[6] (Mux2_1share_7)                  0.00      24.52 r
+  mux_state/mux_1/U16/ZN (AOI22_X1)                       0.04      24.56 f
+  mux_state/mux_1/U12/ZN (INV_X1)                         0.03      24.59 r
+  mux_state/mux_1/o_c[6] (Mux2_1share_7)                  0.00      24.59 r
+  mux_state/o_c[1][6] (Mux2_Dshare_2)                     0.00      24.59 r
+  State_ar/i_state[1][6] (State_Array_Dshare)             0.00      24.59 r
+  State_ar/state_ar_1/i_state[6] (State_Array_1share_3)
+                                                          0.00      24.59 r
+  State_ar/state_ar_1/U204/ZN (INV_X1)                    0.03      24.61 f
+  State_ar/state_ar_1/U203/ZN (OAI222_X1)                 0.06      24.68 r
+  State_ar/state_ar_1/state_regs_reg[3][3][6]/D (DFF_X1)
+                                                          0.01      24.69 r
+  data arrival time                                                 24.69
+
+  clock ideal_clock1 (rise edge)                         25.00      25.00
+  clock network delay (ideal)                             0.00      25.00
+  State_ar/state_ar_1/state_regs_reg[3][3][6]/CK (DFF_X1)
+                                                          0.00      25.00 r
+  library setup time                                     -0.04      24.96
+  data required time                                                24.96
+  --------------------------------------------------------------------------
+  data required time                                                24.96
+  data arrival time                                                -24.69
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.27
+
+
+1

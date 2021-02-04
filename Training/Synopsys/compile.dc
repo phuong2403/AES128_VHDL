@@ -1,0 +1,49 @@
+#Compiling script
+
+remove_design -designs
+
+#Set search path and libraries
+set target_library ${nang45}
+set link_library ${nang45}
+
+#Define design lib
+define_design_lib WORK -path "./work"
+
+#Define top level and arch
+
+set TOPCELL_ENT AES_128_CAPA
+set TOPCELL_ARCH Behavioral
+set DIR {/users/cosic/ldemeyer/Documents/Sboxes/TI/HW/CAPA3}
+
+
+
+#Analyze target design
+analyze -library WORK -autoread $DIR > ./analyze.log
+
+#Elaborate design
+elaborate $TOPCELL_ENT -architecture $TOPCELL_ARCH -library DEFAULT  > ./elaborate.log
+
+#Link design with the library
+link
+
+create_clock -period 100 -waveform {0 20} -name clk
+
+#Check Design
+check_design > check.log
+
+#Compile
+#compile_ultra -no_autoungroup > ./compile.log
+compile -exact_map > ./compile.log
+#compile -ungroup_all -exact_map	 > ./compile.log
+#compile -ungroup_all > ./compile.log
+#compile_ultra > ./compile.log
+#compile > ./compile.log
+
+#Reports
+report_cell > Reports/cell.log
+report_area > Reports/area.log
+report_timing > Reports/timing.log
+report_power -nosplit -hier > ./Reports/power.log
+report_reference -nosplit -hierarchy > ./Reports/ref.log
+report_resources -nosplit -hierarchy > ./Reports/resources.log
+sizeof_collection [ get_cells -hier *]
